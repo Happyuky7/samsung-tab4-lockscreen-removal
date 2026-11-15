@@ -1,0 +1,25 @@
+SAMSUNG USB DRIVER — download if the tablet is not detected
+===========================================================
+
+On modern Windows the download-mode driver often installs automatically (the
+tablet shows up as "SAMSUNG Mobile USB CDC Composite Device" in Device Manager).
+If Odin does NOT see the device (no blue "0:[COM x]" box), install the official
+Samsung USB driver.
+
+Official download:
+  - https://developer.samsung.com/android-usb-driver
+  (file: "SAMSUNG USB Driver for Mobile Phones", e.g. SAMSUNG_USB_Driver_for_Mobile_Phones.exe)
+
+After installing:
+  1. Reboot the PC if asked.
+  2. Reconnect the tablet (in Download/Odin mode).
+  3. Check Windows Device Manager -> it should list a SAMSUNG device with status OK.
+  4. Open Odin -> the blue "0:[COM x]" box and "Added!!" should appear.
+
+Troubleshooting if still not detected:
+  - Try a different USB port (prefer a rear USB 2.0 port on a desktop).
+  - Try another USB cable (some are charge-only).
+  - Uninstall any old/duplicate Samsung drivers, then reinstall.
+
+Note: this driver is Samsung's and is NOT redistributed here — download it from
+the official link above. This project is not affiliated with Samsung.

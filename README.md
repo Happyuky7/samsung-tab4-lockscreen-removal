@@ -92,9 +92,11 @@ convenience, but **prefer re-downloading from the official sources** and verifyi
 > your layout differs.
 
 ### 0. Install tools on the PC
-1. Install the **Samsung USB drivers**.
+1. Install the **Samsung USB drivers** — usually auto-installed; if the tablet is **not detected** by
+   Odin, get them from <https://developer.samsung.com/android-usb-driver> (see
+   [`tools/SAMSUNG_USB_DRIVER.txt`](tools/SAMSUNG_USB_DRIVER.txt) for troubleshooting).
 2. Unzip **platform-tools** somewhere (gives you `adb.exe`).
-3. Unzip **Odin**.
+3. Unzip **Odin** (not bundled — see [`tools/ODIN_DOWNLOAD.txt`](tools/ODIN_DOWNLOAD.txt)).
 4. Download the **TWRP `.tar`** for `matisse`.
 
 ### 1. Enter Download (Odin) mode on the tablet
@@ -206,8 +208,12 @@ Partition map on this device (confirm yours with `adb shell ls -l /dev/block/pla
 - **`/data` was 96 % full.** A TWRP backup can't be stored on the device itself — stream the images
   straight to the PC (`02_backup_partitions.sh`).
 - **`sort -h` / GNU flags** don't exist in TWRP's BusyBox. Use `sort -rn` with `-k`.
-- **No emulator.** You cannot run this tablet's data/system in a PC Android emulator — it's ARM +
-  Samsung-specific (TouchWiz, MSM8226 kernel/drivers); AVDs are x86 and won't boot it.
+- **Emulator route = possible, but impractical.** You *can't* just drop this tablet's `system`/`data`
+  images into a normal x86 AVD and boot it: the ROM is ARM and Samsung-specific (TouchWiz, MSM8226
+  kernel/drivers). With enough effort it's still doable — full-system **ARM emulation via QEMU**, or
+  extracting individual APKs + their app data and loading them into a matching ARM Android image — but
+  it's a lot of work and fragile. For simply getting your files/accounts back, flashing TWRP and
+  pulling the data (this guide) is far easier than any emulator path.
 
 ---
 
