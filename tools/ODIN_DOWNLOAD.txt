@@ -1,0 +1,19 @@
+ODIN — NOT bundled in this repository
+=====================================
+
+Odin3 is Samsung's proprietary flashing tool. It is NOT redistributed here to
+avoid any licensing issues. Download it yourself from the sources below.
+
+Version used in this guide: Odin3 v3.13.1
+
+Download:
+  - https://odindownload.com/download/
+  - direct: https://odindownload.com/download/Odin3_v3.13.1.zip
+
+After downloading:
+  1. Unzip it anywhere.
+  2. Run "Odin3 v3.13.1.exe" as Administrator.
+  3. Follow README.md -> step 2 ("Flash TWRP with Odin").
+
+Note: always scan downloads and prefer verifying the file yourself. Odin is a
+Samsung-owned binary; this project is not affiliated with Samsung.

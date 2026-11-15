@@ -266,3 +266,7 @@ TWRP flashed:     3.5.2_9-0 (matisse, by matteo0026)
 ```
 
 See [`SOURCES.md`](SOURCES.md) for the complete list of references.
+
+---
+
+<p align="center"><b>Happy Recovery Data!</b> 🎉🍀<br><sub>Good luck — and remember: use at your own risk.</sub></p>
